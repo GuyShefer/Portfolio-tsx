@@ -26,9 +26,10 @@ export const NavLink = styled(Link)`
     color: #fff;
     transition: all 0.3s ease-in;
     font-size: 1.5rem;
+    font-weight: 600;
 
     &:hover {
-        color: #7b7fda;
+        color: rebeccapurple;
     }
 
     @media screen and (max-width: 768px) {
