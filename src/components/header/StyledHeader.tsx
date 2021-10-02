@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import { NavLink as Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import { NavLink as Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
     background: #000;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     flex-wrap: wrap;
-    /* padding: 2rem 0 ; */
     z-index: 10;
 `;
 
@@ -38,38 +36,25 @@ export const Hamburger = styled(FaBars)`
     }
 `;
 
-export const Nav = styled.div<any>`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+export const Toggle = styled.div`
+    height: 25px;
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-left: auto;
+    background-image: ${props => props.theme === 'light' ? `linear-gradient(aqua, skyblue)` : `linear-gradient(midnightblue, rebeccapurple)`};
     position: relative;
-
-    @media (max-width: 768px) {
-        overflow: hidden;
-        flex-direction: column;
-        width: 100%;
-        max-height: ${props => props.isOpen ? "300px" : "0"};
-        transition: max-height 0.3s ease-in;
-        background: gray;
-        justify-content: space-evenly;
-    }
 `;
 
-export const NavLink = styled(Link)`
-    padding: 0 2rem;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease-in;
-    font-size: 1.5rem;
-
-    &:hover {
-        color: #7b7fda;
-    }
-
-    @media screen and (max-width: 768px) {
-        padding: 1.25rem 0;
-        width: 100%;
-    }
+export const Notch = styled.div`
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: ${props => props.theme === 'light' ? `yellow` : `whitesmoke`};
+    box-shadow: 0 0 5px ${props => props.theme === 'light' ? `yellow` : `whitesmoke`};
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    transform: ${props => props.theme === 'light' ? `translate(25px, 0)` : `translate(0, 0)`};
+    transition: 0.3s ease;
 `;
