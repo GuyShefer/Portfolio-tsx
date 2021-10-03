@@ -13,7 +13,6 @@ export const StyledNav = styled.div<any>`
         width: 100%;
         max-height: ${props => props.isOpen ? "300px" : "0"};
         transition: max-height 0.3s ease-in;
-        background: gray;
         justify-content: space-evenly;
     }
 `;
@@ -26,7 +25,7 @@ export const NavLink = styled(Link)`
     color: #fff;
     transition: all 0.3s ease-in;
     font-size: 1.5rem;
-    font-weight: 600;
+        font-weight: 600;
 
     &:hover {
         color: rebeccapurple;
@@ -35,5 +34,12 @@ export const NavLink = styled(Link)`
     @media screen and (max-width: 768px) {
         padding: 1.25rem 0;
         width: 100%;
+        background: #fff;
+        color: #000;
+        border-bottom: 2px dashed #999;
+
+        &:last-child {
+            border-bottom: none;
+        }
     }
 `;

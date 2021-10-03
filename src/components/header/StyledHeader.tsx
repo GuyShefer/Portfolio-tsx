@@ -7,6 +7,9 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+    width: 100%;
+    position: fixed;
     z-index: 10;
 `;
 
@@ -15,7 +18,7 @@ export const HeaderLogo = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 2rem 1rem;
+    padding: 0.35rem 1rem;
     height: 100%;
     cursor: pointer;
 

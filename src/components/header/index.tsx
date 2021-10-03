@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Nav from '../nav';
 import { StyledHeader, HeaderLogo, Hamburger, Toggle, Notch } from './StyledHeader';
-
+import logo from '../../assets/images/logo.png';
 
 const Header = ({ themeToggler, theme }: any) => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -9,7 +9,7 @@ const Header = ({ themeToggler, theme }: any) => {
     return (
         <StyledHeader>
             <HeaderLogo to="/">
-                <h1>Logo</h1>
+                <img src={logo} alt="logo" width={"80px"}/>
             </HeaderLogo>
 
             <Toggle onClick={themeToggler} theme={theme}>
