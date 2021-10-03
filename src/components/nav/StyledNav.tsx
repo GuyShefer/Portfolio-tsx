@@ -25,18 +25,22 @@ export const NavLink = styled(Link)`
     color: #fff;
     transition: all 0.3s ease-in;
     font-size: 1.5rem;
-        font-weight: 600;
+    font-weight: 600;
 
     &:hover {
-        color: rebeccapurple;
+        color: ${props => props.theme.navHover};
     }
 
     @media screen and (max-width: 768px) {
         padding: 1.25rem 0;
         width: 100%;
-        background: #fff;
-        color: #000;
-        border-bottom: 2px dashed #999;
+        background: ${props => props.theme.mobileNavPrimary};
+        color: ${props => props.theme.mobileNavSecondary};
+        border-bottom: 1px solid ${props => props.theme.mobileNavTertiary};
+
+        &:hover {
+            background:  ${props => props.theme.mobileNavTertiary};
+        }
 
         &:last-child {
             border-bottom: none;

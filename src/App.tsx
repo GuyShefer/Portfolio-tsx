@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './components/header';
+import Hero from './pages/hero';
 import GlobalStyle from './utils/global';
 import { ThemeProvider } from 'styled-components';
 import { useDarkMode } from './hooks/useDarkMode';
@@ -20,7 +21,7 @@ function App() {
       <div className="App" style={{ height: '100vh' }}>
         <Router>
           <Header themeToggler={toggleTheme} theme={theme} />
-          more pages
+          <Hero />
         </Router>
       </div>
     </ThemeProvider>

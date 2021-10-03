@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
-    background: #000;
+    background: ${props => props.theme.header};
     display: flex;
     align-items: center;
     flex-wrap: wrap;
