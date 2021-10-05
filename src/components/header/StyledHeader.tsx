@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
     width: 100%;
     position: fixed;
     z-index: 10;
+    height: 12vh;
 `;
 
 export const HeaderLogo = styled(Link)`
